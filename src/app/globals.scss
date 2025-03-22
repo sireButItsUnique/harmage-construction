@@ -1,11 +1,43 @@
 @import "tailwindcss";
 
+// color theme: https://colorffy.com/dark-theme-generator
+$base-0: #171717;
+$base-1: #2c2c2c;
+$base-2: #434343;
+$base-3: #5b5b5b;
+$base-4: #747474;
+$base-5: #8e8e8e;
+
+$tone-0: #1e2427;
+$tone-1: #33383b;
+$tone-2: #494e51;
+$tone-3: #616567;
+$tone-4: #797d7f;
+$tone-5: #929597;
+
+$highlight-0: #54b3d6;
+$highlight-1: #6cbbdb;
+$highlight-2: #81c4df;
+$highlight-3: #95cce4;
+$highlight-4: #a7d4e8;
+$highlight-5: #badded;
+
+.gradient {
+  background-image: linear-gradient(to bottom right, $tone-2, $highlight-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  font-weight: bolder;
+}
+
 .links {
   position: relative;
   background-image: linear-gradient(
     to right,
-    #54b3d6,
-    #54b3d6 50%,
+    $highlight-2,
+    $highlight-2 50%,
     #ffffff 50%
   );
   background-size: 200% 100%;
@@ -21,7 +53,7 @@
 
 .links::before {
   content: '';
-  background: #54b3d6;
+  background: $highlight-2;
   display: block;
   position: absolute;
   bottom: -3px;
